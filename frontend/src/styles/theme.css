@@ -1,0 +1,141 @@
+/* 深色侧栏 + 浅内容区：全局设计令牌 */
+:root {
+  --dv-sidebar-bg: #0f172a;
+  --dv-sidebar-hover: rgba(255, 255, 255, 0.06);
+  --dv-sidebar-active: rgba(13, 148, 136, 0.22);
+  --dv-sidebar-accent: #2dd4bf;
+  --dv-sidebar-text: #94a3b8;
+  --dv-sidebar-text-strong: #f1f5f9;
+  --dv-sidebar-border: rgba(148, 163, 184, 0.12);
+
+  --dv-primary: #0d9488;
+  --dv-primary-hover: #0f766e;
+  --dv-primary-soft: #ccfbf1;
+
+  --dv-bg: #f1f5f9;
+  --dv-surface: #ffffff;
+  --dv-border: #e2e8f0;
+  --dv-border-soft: #f1f5f9;
+
+  --dv-text: #0f172a;
+  --dv-text-secondary: #475569;
+  --dv-text-muted: #94a3b8;
+
+  --dv-up: #059669;
+  --dv-down: #e11d48;
+
+  --dv-radius: 12px;
+  --dv-radius-sm: 8px;
+  --dv-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.03);
+  --dv-shadow-hover: 0 4px 16px rgba(15, 23, 42, 0.08);
+
+  --el-color-primary: #0d9488;
+  --el-color-primary-light-3: #2dd4bf;
+  --el-color-primary-light-5: #5eead4;
+  --el-color-primary-light-7: #99f6e4;
+  --el-color-primary-light-8: #ccfbf1;
+  --el-color-primary-light-9: #f0fdfa;
+  --el-color-primary-dark-2: #0f766e;
+  --el-border-radius-base: 8px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--dv-bg);
+  color: var(--dv-text);
+  font-family: 'Plus Jakarta Sans', 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 看板内容区卡片统一外观 */
+.dv-panel .el-card {
+  border: 1px solid var(--dv-border);
+  border-radius: var(--dv-radius);
+  box-shadow: var(--dv-shadow);
+  background: var(--dv-surface);
+}
+
+.dv-panel .el-card__header {
+  border-bottom: 1px solid var(--dv-border-soft);
+  color: var(--dv-text);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 18px;
+}
+
+.dv-panel .el-card__body {
+  padding: 16px 18px;
+}
+
+/* 表格单元格单行显示，数字变长时横向撑开，不折成两行 */
+.dv-panel .el-table .cell {
+  white-space: nowrap;
+}
+
+/* 可拖列宽，但去掉 Element Plus 默认的整表网格线，只在拖动时露出一条细线 */
+.dv-panel .el-table.dv-resizable.el-table--border {
+  border: none;
+}
+.dv-panel .el-table.dv-resizable.el-table--border::before,
+.dv-panel .el-table.dv-resizable.el-table--border::after,
+.dv-panel .el-table.dv-resizable .el-table__inner-wrapper::before,
+.dv-panel .el-table.dv-resizable .el-table__inner-wrapper::after,
+.dv-panel .el-table.dv-resizable .el-table__border-left-patch {
+  display: none;
+}
+.dv-panel .el-table.dv-resizable.el-table--border .el-table__cell {
+  border-right: none;
+}
+.dv-panel .el-table.dv-resizable .el-table__column-resize-proxy {
+  border-left: 1px solid var(--dv-primary);
+}
+
+/* 顶栏通用 */
+.dv-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 0 20px 0 12px;
+  background: var(--dv-surface);
+  border-bottom: 1px solid var(--dv-border);
+  flex-shrink: 0;
+}
+
+.dv-topbar-title {
+  margin-right: auto;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dv-text);
+}
+
+.dv-username {
+  color: var(--dv-text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* 筛选 / 工具条 */
+.dv-toolbar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  background: var(--dv-surface);
+  border: 1px solid var(--dv-border);
+  border-radius: var(--dv-radius);
+  box-shadow: var(--dv-shadow);
+  padding: 12px 16px;
+}

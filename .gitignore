@@ -1,0 +1,60 @@
+# 环境与密钥（务必忽略）
+.env
+.env.local
+**/.env
+
+# Python
+.venv/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# 本地数据库 / 演示库（脚本可进仓库；生成的 *.db 不提交）
+*.db
+*.sqlite3
+
+# 业务原始数据（真实订单/财务，不进公开仓库）；保留 DataProcess 2/dataprocess 脚本
+/DataProcess 2/data/
+# 导入后导出的本地表快照（与 data 同级，含真实业务数据）
+/DataProcess 2/data_export/
+
+# Node / 前端
+node_modules/
+frontend/dist/
+*.local
+
+# 编辑器 / 系统
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# Jupyter / Anaconda
+.ipynb_checkpoints/
+anaconda_projects/
+/DataProcess 2/dataprocess/test.xlsx
+
+# 日志与临时文件
+*.log
+tmp/
+temp/
+
+# 资质证件上传与本机 worker
+/backend/uploads/
+/qualification_worker/.env
+/qualification_worker/tmp/
+/qualification_worker/licenses/*
+!/qualification_worker/licenses/.gitkeep
+
+# Playwright（openChrom 调试配置 / 报告 / 录屏；原 playwright/.gitignore）
+/qualification_worker/playwright/browser_profile/
+/qualification_worker/playwright/chrome_profile/
+/qualification_worker/playwright/chrome_debug_profile/
+/qualification_worker/playwright/test-results/
+/qualification_worker/playwright/playwright-report/
+/qualification_worker/playwright/*.png
+/qualification_worker/playwright/*.webm
+/qualification_worker/playwright/*.zip

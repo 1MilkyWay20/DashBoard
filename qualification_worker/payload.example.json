@@ -1,0 +1,17 @@
+{
+  "id": 1,
+  "brand": "xj",
+  "mt_store_id": "123456",
+  "elm_store_id": "654321",
+  "jd_store_id": "",
+  "tg_store_id": "",
+  "operator_name": "示例经营者",
+  "credit_code": "91XXXXXXXXXXXXXX",
+  "legal_person": "张三",
+  "address": "某某市某某路 1 号",
+  "main_business_type": "餐饮服务",
+  "business_scope": "热食类食品制售",
+  "valid_until": "2027-12-31",
+  "license_no": "JYXXXXXXXX",
+  "approved_at": "2024-01-01"
+}

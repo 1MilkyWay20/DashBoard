@@ -1,0 +1,4 @@
+# 依赖已合并到上级目录 qualification_worker/requirements.txt
+# 请使用上级虚拟环境：
+#   cd .. && source .venv/bin/activate
+#   pip install -r requirements.txt
